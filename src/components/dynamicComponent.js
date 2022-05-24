@@ -1,6 +1,6 @@
 import React from 'react';
 import { sbEditable } from '@storyblok/storyblok-editable';
-import Teaser from './teaser';
+import Teaser from './Teaser';
 import Grid from './Grid';
 import Feature from './Feature';
  

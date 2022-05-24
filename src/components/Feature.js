@@ -5,6 +5,9 @@ const Feature = ({ blok }) => (
         <h2 className="font-bold text-xl mb-2">
             {blok.name}
         </h2>
+        <div>
+           Body: {blok.body}
+        </div>
     </div>
 )
  
