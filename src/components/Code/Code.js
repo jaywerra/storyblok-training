@@ -10,6 +10,7 @@ const Code = ({ blok }) => {
 
 	return (
 		<div className="px-4 lg:px-0 lg:container lg:mx-auto py-4">
+			<h2>{blok.language_selector}</h2>
 			<pre>
 				<code className={`language-${blok.language_selector}`}>
 					{blok.code_block}
