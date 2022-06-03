@@ -1,9 +1,9 @@
 import React from 'react';
 import { sbEditable } from '@storyblok/storyblok-editable';
-import Teaser from './Teaser';
-import Grid from './Grid';
-import Feature from './Feature';
-import Code from './Code';
+import Code from '../Code';
+import Feature from '../Feature';
+import Grid from '../Grid';
+import Teaser from '../Teaser';
  
 const Components = {
   'feature': Feature,

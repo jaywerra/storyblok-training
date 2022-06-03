@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { sbEditable } from '@storyblok/storyblok-editable';
 import DynamicComponent from '../components/DynamicComponent';
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 
 const IndexPage = ({
 		data,

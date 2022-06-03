@@ -1,6 +1,6 @@
 import * as React from "react";
 import uniqueId from 'uniqid';
-import DynamicComponent from "./DynamicComponent";
+import DynamicComponent from "../DynamicComponent";
 
 const Grid = ({ blok }) => (
     <div className="px-4 lg:px-0 lg:container lg:mx-auto">
