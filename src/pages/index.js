@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { sbEditable } from '@storyblok/storyblok-editable';
-import DynamicComponent from '../components/dynamicComponent';
+import DynamicComponent from '../components/DynamicComponent';
 import Layout from '../components/Layout';
 
 const IndexPage = ({
@@ -10,8 +10,7 @@ const IndexPage = ({
 
 	const story = data.story;
 	story.content = JSON.parse(story.content);
-	// console.log(story);
-
+	
 	const components = story.content.body.map(blok => {
 		return (<DynamicComponent blok={blok} key={blok._uid} />)
 	})
@@ -24,7 +23,7 @@ const IndexPage = ({
 			</div>
 		</Layout>
 	)
-}
+};
 
 export default IndexPage;
 

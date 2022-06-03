@@ -3,11 +3,13 @@ import { sbEditable } from '@storyblok/storyblok-editable';
 import Teaser from './Teaser';
 import Grid from './Grid';
 import Feature from './Feature';
+import Code from './Code';
  
 const Components = {
   'feature': Feature,
   'grid': Grid,
   'teaser': Teaser,
+  'code': Code,
 }
  
 const DynamicComponent = ({ blok }) => {
