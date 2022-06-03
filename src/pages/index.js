@@ -10,7 +10,7 @@ const IndexPage = ({
 
 	const story = data.story;
 	story.content = JSON.parse(story.content);
-	
+
 	const components = story.content.body.map(blok => {
 		return (<DynamicComponent blok={blok} key={blok._uid} />)
 	})
