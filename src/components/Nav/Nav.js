@@ -1,40 +1,93 @@
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import React from 'react'
+import { 
+    FaChevronDown,
+    FaChevronUp,
+} from 'react-icons/fa';
+import SubNav from '../SubNav/SubNav';
+import NavLink from '../NavLink/NavLink';
+
 
 const Nav = () => {
+    
     const links = [
         {
             linkLabel: "Product",
-            linkHref: "/",
+            linkHref: "#",
+            icon: <FaChevronDown />,
+            subNav: [
+                {
+                    linkLabel: "Features",
+                    linkHref: "/features/",
+                },
+                {
+                    linkLabel: "Industries",
+                    linkHref: "/features/",
+                },
+            ],
         },
         {
             linkLabel: "Company",
-            linkHref: "/",
+            linkHref: "#",
+            icon: <FaChevronDown />,
+            subNav: [
+                {
+                    linkLabel: "Customer Success",
+                    linkHref: "/",
+                },
+                {
+                    linkLabel: "Partners",
+                    linkHref: "/",
+                },
+            ],
         },
         {
             linkLabel: "Case Studies",
-            linkHref: "/",
+            linkHref: "#",
+            icon: <FaChevronDown />,
         },
         {
             linkLabel: "Contact us",
-            linkHref: "/contact/"
+            linkHref: "/contact/",
         },
-    ]
+    ];
+
+    const [showMenu, setShowMenu] = useState();
+
+    const handleClick = e => {
+        e.preventDefault();
+        
+        setShowMenu(!showMenu);
+    }
+
     return (
         <nav>
-           <ul className="flex">
+           <ul className="flex font-mono uppercase tracking-widest">
                {links.map(link => {
-                   return (
+                   return (                    
                         <li 
                             key={link.linkLabel} 
                             className="ml-10"
+                            onClick={() => setShowMenu(link.linkLabel)}
+
                         >
-                            <Link
-                                to={link.linkHref}
-                                className="block py-1 font-mono border-b border-white border-solid hover:border-black ease-linear uppercase"
-                            >
-                                {link.linkLabel}
-                            </Link>
+                            <NavLink
+                                linkHref={link.linkHref}
+                                linkLabel={link.linkLabel}
+                                classes={`${showMenu === link.linkLabel ? 'text-pink-600' : ''} block py-1 border-b border-white border-solid hover:border-black ease-linear`}
+                            />
+                            {link.subNav && (
+                                <ul className={`${showMenu === link.linkLabel ? 'block' : 'hidden'} absolute left-0 mt-4 w-full bg-white shadow-xl p-10 border border-solid border-gray-400`}>
+                                    {link.subNav.map(subNavLink => {
+                                        return (
+                                            <SubNav
+                                                linkLabel={subNavLink.linkLabel}
+                                                linkUrl={subNavLink.linkHref}
+                                            />
+                                        );
+                                    })}
+                                </ul>
+                            )}
                         </li>
                    );
                })}

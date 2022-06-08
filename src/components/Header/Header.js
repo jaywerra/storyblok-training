@@ -4,8 +4,8 @@ import Nav from '../Nav';
 
 const Header = () => {
   return (
-    <header className="header py-6">
-      <div className="px-4 lg:px-0 lg:container lg:mx-auto">
+    <header className="py-6">
+      <div className="relative px-4 lg:px-0 lg:container lg:mx-auto">
         <div className="flex justify-between items-center">
           <Link
             to={`/`}
