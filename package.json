@@ -10,6 +10,7 @@
     "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.15.0",
     "dotenv-webpack": "^7.1.0",
+    "framer-motion": "^6.3.11",
     "gatsby": "^4.14.1",
     "gatsby-plugin-gatsby-cloud": "^4.14.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
