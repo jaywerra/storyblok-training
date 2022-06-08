@@ -1,8 +1,8 @@
-const path = require(`path`);
+// const path = require(`path`);
 
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+// require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 
 module.exports = {
   siteMetadata: {
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: process.env.STORYBLOK_API,
+        accessToken: 'dzEKD5UQSn3CI9uXTAlQ4Att',
         version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
         localAssets: true,
       }

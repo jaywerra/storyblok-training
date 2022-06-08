@@ -5,7 +5,7 @@ import DynamicComponent from '../components/DynamicComponent';
 import Layout from '../components/Layout/Layout';
 import useStoryblok from "../lib/storyblok";
 
-const IndexPage = ({ data, location }) => {
+const StoryblokEntry = ({ data, location }) => {
   let story = data.storyblokEntry
   story = useStoryblok(story, location)
 
@@ -23,13 +23,15 @@ const IndexPage = ({ data, location }) => {
   )
 }
 
-export default IndexPage;
+export default StoryblokEntry;
 
 export const query = graphql`
-  query HomeQuery {
-    storyblokEntry(full_slug: {eq: "home"}) {
-      content
+  query ($full_slug: String!) {
+    storyblokEntry(full_slug: { eq: $full_slug }) {
+      id
       name
+      full_slug
+      content
     }
   }
 `

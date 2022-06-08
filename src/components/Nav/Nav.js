@@ -4,8 +4,8 @@ import React from 'react'
 const Nav = () => {
     const links = [
         {
-            linkLabel: "About",
-            linkHref: "/about/",
+            linkLabel: "Features",
+            linkHref: "/features/",
         },
         {
             linkLabel: "Contact",

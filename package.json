@@ -5,9 +5,11 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@storyblok/js": "^1.2.1",
     "@storyblok/storyblok-editable": "^1.1.0",
     "babel-plugin-prismjs": "^2.1.0",
     "babel-preset-gatsby": "^2.15.0",
+    "dotenv-webpack": "^7.1.0",
     "gatsby": "^4.14.1",
     "gatsby-plugin-gatsby-cloud": "^4.14.0",
     "gatsby-plugin-google-fonts": "^1.0.1",

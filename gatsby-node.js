@@ -1,33 +1,52 @@
-// const path = require('path')
+const path = require('path')
 
-// exports.createPages = async ({ graphql, actions }) => {
-//   const storyblokEntry = path.resolve('src/templates/storyblok-entry.js')
+exports.createPages = ({ graphql, actions }) => {
+   const { createPage } = actions
 
-//   // querying the storyblok data from GraphQL data layer
-//   const { data } = await graphql(
-//     `query {
-//       allStoryblokEntry {
-//         edges {
-//           node {
-//             id
-//             full_slug
-//           }
-//         }
-//       }
-//     }`
-//   )
+   return new Promise((resolve, reject) => {
+       // sets the template for the pages
+       const storyblokEntry = path.resolve('src/templates/page.js')
 
-//   // creating pages using createPage function like described in the documentation
-//   // https://www.gatsbyjs.org/docs/programmatically-create-pages-from-data/#creating-pages
-//   data.allStoryblokEntry.edges.forEach(edge => {
-//     const full_slug = edge.node.full_slug
+       // gets all storyblok stories with the content type 'page'
+       resolve(
+         graphql(
+           `{
+             stories: allStoryblokEntry(filter: {field_component: {eq: "page"}}) {
+               edges {
+                 node {
+                   id
+                   name
+                   slug
+                   field_component
+                   full_slug
+                   content
+                 }
+               }
+             }
+           }`
+         ).then(result => {
+           if (result.errors) {
+             console.log(result.errors)
+             reject(result.errors)
+           }
 
-//     actions.createPage({
-//       path: full_slug,
-//       component: storyblokEntry,
-//       context: {
-//         slug: full_slug
-//       },
-//     })
-//   })
-// }
+           const entries = result.data.stories.edges
+
+           // creates a page for each entry with the storyblok slug
+           entries.forEach((entry) => {
+               // skip home story
+               if(entry.slug !== "home") {
+                   const page = {
+                       path: `/${entry.node.full_slug}`,
+                       component: storyblokEntry,
+                       context: {
+                           story: entry.node
+                       }
+                   }
+                   createPage(page)
+               }
+           })
+         })
+       )
+     })
+}
