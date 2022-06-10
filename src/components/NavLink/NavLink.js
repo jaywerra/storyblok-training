@@ -7,14 +7,12 @@ const NavLink = ({
     toggleMenu,
 }) => {
     return (
-        <>
-            <Link
-                to={linkHref}
-                onClick={toggleMenu}
-            >
-                {linkLabel}
-            </Link>
-        </>
+        <Link
+            to={linkHref}
+            onClick={toggleMenu}
+        >
+            {linkLabel}
+        </Link>
     )
 }
 

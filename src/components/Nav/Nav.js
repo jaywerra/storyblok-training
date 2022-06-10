@@ -6,7 +6,7 @@ import { NavData } from './NavData';
 const Nav = () => {
     const [subnav, setSubnav] = useState(null);
     
-    const toggleMenu = (i) => {
+    const toggleMenu = i => {
 		if (subnav === i) {
 			return setSubnav(null);
 		}
