@@ -4,10 +4,7 @@ import { Link } from 'gatsby';
 const NavLink = ({
     linkHref,
     linkLabel,
-    classes,
-    link,
     toggleMenu,
-    menuClass,
 }) => {
     return (
         <>

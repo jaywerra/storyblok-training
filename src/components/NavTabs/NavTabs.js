@@ -16,7 +16,7 @@ const NavTabs = ({
     return (
         <div className="flex w-full">
             <div className="tabsctas pr-8 w-1/4 border-r border-solid border-slate-200">
-                <h2 className="bg-blue-100 text-blue-500 inline-block mb-4 p-3">
+                <h2 className="bg-blue-100 text-blue-500 inline-block mb-6 p-3">
                     {navHeadingTitle}
                 </h2>
                 <ul>
@@ -24,7 +24,7 @@ const NavTabs = ({
                         const label = tab.props.label;
                         return (
                             <li
-                                className={`${label == activeTab ? "text-blue-600" : ""} mb-2`}
+                                className={`${label == activeTab ? "text-blue-600" : ""} mb-3`}
                                 key={label}
                             >
                                 <button

@@ -30,13 +30,14 @@ const Nav = () => {
                             />
                             {link.subNav && (
                                 <div
-                                    className={`${subnav === i ? 'block' : 'hidden'} flex absolute left-0 mt-8 p-10 w-full bg-white border border-solid border-slate-300 drop-shadow-xl`}
+                                    className={`${subnav === i ? 'block' : 'hidden'} flex absolute left-0 mt-8 p-12 w-full bg-white border border-solid border-slate-300 drop-shadow-xl`}
                                 >
                                     <NavTabs navHeadingTitle={link.title}>
                                         {link.subNav.map(subLink => {
                                             return (
                                                 <div
                                                     label={subLink.linkLabel}
+                                                    key={subLink.linkLabel}
                                                 >
                                                     {subLink.linkLabel}
                                                 </div>
