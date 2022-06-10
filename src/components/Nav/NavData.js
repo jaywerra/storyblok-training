@@ -30,28 +30,100 @@ export const NavData = [
         ],
     },
     {
+        linkLabel: "Pricing",
+        linkHref: "#",
+        icon: <FaChevronDown />,
+    },
+    {
+        linkLabel: "Solutions",
+        linkHref: "#",
+        icon: <FaChevronDown />,
+        title: 'Solutions',
+        subNav: [
+            {
+                linkLabel: "For DevOps",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "For ITOps",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "For SecOps",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "By Industry",
+                linkHref: "/",
+            },
+        ],
+    },
+    {
         linkLabel: "Company",
         linkHref: "#",
         icon: <FaChevronDown />,
         title: 'About Us',
         subNav: [
             {
-                linkLabel: "Customer Success",
+                linkLabel: "News",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Press Releases",
                 linkHref: "/",
             },
             {
                 linkLabel: "Partners",
                 linkHref: "/",
             },
+            {
+                linkLabel: "Careers",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "FAQs",
+                linkHref: "/",
+            },
         ],
     },
     {
-        linkLabel: "Case Studies",
+        linkLabel: "Customers",
         linkHref: "#",
         icon: <FaChevronDown />,
     },
     {
-        linkLabel: "Contact us",
+        linkLabel: "Learn",
         linkHref: "/contact/",
+        title: 'Learn',
+        subNav: [
+            {
+                linkLabel: "Blogs",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Glossary",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Guides",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "The Nest",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Resources",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Events",
+                linkHref: "/",
+            },
+            {
+                linkLabel: "Customer Success",
+                linkHref: "/",
+            },
+        ],
     },
 ];

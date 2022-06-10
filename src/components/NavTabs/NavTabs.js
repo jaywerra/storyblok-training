@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby';
 
 const NavTabs = ({
     children,
@@ -24,7 +23,7 @@ const NavTabs = ({
                         const label = tab.props.label;
                         return (
                             <li
-                                className={`${label == activeTab ? "text-blue-600" : ""} mb-3`}
+                                className={`${label === activeTab ? "text-blue-600" : ""} mb-3`}
                                 key={label}
                             >
                                 <button
@@ -40,7 +39,7 @@ const NavTabs = ({
             </div>
             <div className="panels w-3/4 pl-12">
                 {children.map(one => {
-                    if (one.props.label == activeTab) {
+                    if (one.props.label === activeTab) {
                         return (
                             <div
                                 key={one.props.label}
@@ -50,6 +49,7 @@ const NavTabs = ({
                             </div>
                         );
                     }
+                    return null;
                 })}
             </div>
         </div>
