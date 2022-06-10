@@ -12,10 +12,6 @@ export const NavData = [
         title: 'Platform Features',
         subNav: [
             {
-                linkLabel: "Features",
-                linkHref: "/features/",
-            },
-            {
                 linkLabel: "Scalability",
                 linkHref: "#",
             },
@@ -25,6 +21,10 @@ export const NavData = [
             },
             {
                 linkLabel: "Integration / APIs",
+                linkHref: "#",
+            },
+            {
+                linkLabel: "Sub-second Searches",
                 linkHref: "#",
             },
         ],
