@@ -31,6 +31,7 @@ const Nav = () => {
                                 linkLabel={link.linkLabel}
                                 link={link}
                                 toggleMenu={() => {toggleMenu(i)}}
+                                activeClass={`${subnav === i ? 'text-blue-600' : ''}`}
                             />
                             {link.subNav && (
                                 <div
@@ -43,7 +44,7 @@ const Nav = () => {
                                                     label={subLink.linkLabel}
                                                     key={subLink.linkLabel}
                                                 >
-                                                    {subLink.linkLabel}
+                                                    {subLink?.component}
                                                 </div>
                                             );
                                         })}

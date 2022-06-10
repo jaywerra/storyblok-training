@@ -5,11 +5,13 @@ const NavLink = ({
     linkHref,
     linkLabel,
     toggleMenu,
+    activeClass,
 }) => {
     return (
         <Link
             to={linkHref}
             onClick={toggleMenu}
+            className={activeClass}
         >
             {linkLabel}
         </Link>

@@ -3,6 +3,7 @@ import {
     FaChevronDown,
     // FaChevronUp,
 } from 'react-icons/fa';
+import MenuList from '../MenuList/MenuList';
 
 export const NavData = [
     {
@@ -14,18 +15,22 @@ export const NavData = [
             {
                 linkLabel: "Scalability",
                 linkHref: "#",
+                component: <MenuList />,
             },
             {
                 linkLabel: "Index-Free Architecture",
                 linkHref: "#",
+                component: "Component 2",
             },
             {
                 linkLabel: "Integration / APIs",
                 linkHref: "#",
+                component: "Component 3",
             },
             {
                 linkLabel: "Sub-second Searches",
                 linkHref: "#",
+                component: "Component 4",
             },
         ],
     },

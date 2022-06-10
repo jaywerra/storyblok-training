@@ -37,7 +37,7 @@ const NavTabs = ({
                     })}
                 </ul>
             </div>
-            <div className="panels w-3/4 pl-12">
+            <div className="panels w-3/4 pl-8">
                 {children.map(one => {
                     if (one.props.label === activeTab) {
                         return (
