@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import useOnClickOutside from '../../helpers/use-clickoutside';
+import useOnClickOutside from '../../hooks/use-clickoutside';
 import NavLink from '../NavLink/NavLink';
 import NavTabs from '../NavTabs/NavTabs';
 import { NavData } from './NavData';
