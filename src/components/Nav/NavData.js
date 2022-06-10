@@ -9,14 +9,23 @@ export const NavData = [
         linkLabel: "Product",
         linkHref: "#",
         icon: <FaChevronDown />,
+        title: 'Platform Features',
         subNav: [
             {
                 linkLabel: "Features",
                 linkHref: "/features/",
             },
             {
-                linkLabel: "Industries",
-                linkHref: "/features/",
+                linkLabel: "Scalability",
+                linkHref: "#",
+            },
+            {
+                linkLabel: "Index-Free Architecture",
+                linkHref: "#",
+            },
+            {
+                linkLabel: "Integration / APIs",
+                linkHref: "#",
             },
         ],
     },
@@ -24,6 +33,7 @@ export const NavData = [
         linkLabel: "Company",
         linkHref: "#",
         icon: <FaChevronDown />,
+        title: 'About Us',
         subNav: [
             {
                 linkLabel: "Customer Success",
