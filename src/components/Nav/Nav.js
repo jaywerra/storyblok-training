@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import useOnClickOutside from '../../helpers/use-clickoutside';
 import NavLink from '../NavLink/NavLink';
 import NavTabs from '../NavTabs/NavTabs';
 import { NavData } from './NavData';
 
 const Nav = () => {
     const [subnav, setSubnav] = useState(null);
-    
+    const ref = useRef();
+
+    useOnClickOutside(ref, () => setSubnav(false));
+
     const toggleMenu = i => {
 		if (subnav === i) {
 			return setSubnav(null);
@@ -14,7 +18,7 @@ const Nav = () => {
     }
 
     return (
-        <nav>
+        <nav ref={ref}>
             <ul className="flex font-mono uppercase tracking-widest">
                 {NavData.map((link, i) => {
                     return (                    
