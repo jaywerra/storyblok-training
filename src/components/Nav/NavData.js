@@ -93,7 +93,7 @@ export const NavData = [
     },
     {
         linkLabel: "Learn",
-        linkHref: "/contact/",
+        linkHref: "#",
         title: 'Learn',
         subNav: [
             {
