@@ -49,13 +49,21 @@ const Nav = () => {
                                                     {subLink.subNavItems && (
                                                         <ul className="flex justify-between gap-10">
                                                             {subLink.subNavItems.map(innerSubItem => (
-                                                                <MenuList
-                                                                    itemTitle={innerSubItem?.linkLabel}
-                                                                    imagePath={innerSubItem?.imagePath}
-                                                                    imageAltText={innerSubItem?.imageAltText}
-                                                                    linkSummary={innerSubItem?.linkSummary}
-                                                                    readMoreLabel={innerSubItem?.readMoreLabel}
-                                                                />
+                                                                <>
+                                                                    {subLink.component === "menuList"
+                                                                        ? 
+                                                                            <MenuList
+                                                                                itemTitle={innerSubItem?.linkLabel}
+                                                                                imagePath={innerSubItem?.imagePath}
+                                                                                imageAltText={innerSubItem?.imageAltText}
+                                                                                linkSummary={innerSubItem?.linkSummary}
+                                                                                readMoreLabel={innerSubItem?.readMoreLabel}
+                                                                            />
+                                                                        :
+                                                                            <p>{subLink.linkLabel}</p>
+                                                                    }
+                                                                    
+                                                                </>
                                                             ))}
                                                         </ul>
                                                     )}

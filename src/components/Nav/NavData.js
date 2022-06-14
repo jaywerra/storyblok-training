@@ -16,7 +16,7 @@ export const NavData = [
             {
                 linkLabel: "Scalability",
                 linkHref: "#",
-                component: <MenuList />,
+                component: 'menuList',
                 subNavItems: [
                     {
                         linkLabel: "C1 - XXXX",
@@ -44,7 +44,7 @@ export const NavData = [
             {
                 linkLabel: "Index-Free Architecture",
                 linkHref: "#",
-                component: "Component 2",
+                component: 'menuList',
                 subNavItems: [
                     {
                         linkLabel: "C2 - XXXX",
@@ -72,7 +72,7 @@ export const NavData = [
             {
                 linkLabel: "Integration / APIs",
                 linkHref: "#",
-                component: "Component 3",
+                component: 'menuList',
                 subNavItems: [
                     {
                         linkLabel: "C3 - XXXX",
@@ -100,7 +100,7 @@ export const NavData = [
             {
                 linkLabel: "Sub-second Searches",
                 linkHref: "#",
-                component: "Component 4",
+                component: 'menuList',
                 subNavItems: [
                     {
                         linkLabel: "C4 - XXXX",
@@ -141,18 +141,114 @@ export const NavData = [
             {
                 linkLabel: "For DevOps",
                 linkHref: "/",
+                component: 'menuList',
+                subNavItems: [
+                    {
+                        linkLabel: "C1 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C1 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C1 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "For ITOps",
                 linkHref: "/",
+                component: 'menuList',
+                subNavItems: [
+                    {
+                        linkLabel: "C2 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C2 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C2 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "For SecOps",
                 linkHref: "/",
+                component: 'menuList',
+                subNavItems: [
+                    {
+                        linkLabel: "C3 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C3 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C3 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "By Industry",
                 linkHref: "/",
+                component: 'menuList',
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
         ],
     },
@@ -165,22 +261,142 @@ export const NavData = [
             {
                 linkLabel: "News",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Press Releases",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Partners",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Careers",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "FAQs",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
         ],
     },
@@ -197,30 +413,198 @@ export const NavData = [
             {
                 linkLabel: "Blogs",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Glossary",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Guides",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "The Nest",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Resources",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Events",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
             {
                 linkLabel: "Customer Success",
                 linkHref: "/",
+                component: "",
+                subNavItems: [
+                    {
+                        linkLabel: "C4 - XXXX",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C4 - Observability",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C4 - Enterprise",
+                        imagePath: imageOne,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    }
+                ],
             },
         ],
     },
