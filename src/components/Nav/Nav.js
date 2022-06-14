@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { FaStumbleuponCircle } from 'react-icons/fa';
 import useOnClickOutside from '../../hooks/use-clickoutside';
+import MenuList from '../MenuList/MenuList';
 import NavLink from '../NavLink/NavLink';
 import NavTabs from '../NavTabs/NavTabs';
 import { NavData } from './NavData';
@@ -44,7 +46,19 @@ const Nav = () => {
                                                     label={subLink.linkLabel}
                                                     key={subLink.linkLabel}
                                                 >
-                                                    {subLink?.component}
+                                                    {subLink.subNavItems && (
+                                                        <ul className="flex justify-between gap-10">
+                                                            {subLink.subNavItems.map(innerSubItem => (
+                                                                <MenuList
+                                                                    itemTitle={innerSubItem?.linkLabel}
+                                                                    imagePath={innerSubItem?.imagePath}
+                                                                    imageAltText={innerSubItem?.imageAltText}
+                                                                    linkSummary={innerSubItem?.linkSummary}
+                                                                    readMoreLabel={innerSubItem?.readMoreLabel}
+                                                                />
+                                                            ))}
+                                                        </ul>
+                                                    )}
                                                 </div>
                                             );
                                         })}
