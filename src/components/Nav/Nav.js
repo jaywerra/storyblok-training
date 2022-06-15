@@ -36,7 +36,7 @@ const Nav = () => {
             </button>
             <nav
                 ref={ref}
-                className={`${showMenu ? 'block' : 'hidden'} md:block absolute md:static left-0 top-24 md:top-0 w-screen md:w-auto bg-white h-auto md:h-auto py-4 md:py-0`}
+                className={`${showMenu ? 'block' : 'hidden'} md:block absolute md:static left-0 top-16 md:top-0 w-screen md:w-auto bg-white h-auto md:h-auto py-4 md:py-0`}
             >
                 <ul className="md:flex font-mono uppercase tracking-widest">
                     {NavData.map((link, i) => {
