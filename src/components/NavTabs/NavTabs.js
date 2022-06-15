@@ -13,8 +13,8 @@ const NavTabs = ({
     };
     
     return (
-        <div className="md:flex w-full">
-            <div className="tabsctas pr-8 md:w-1/4 md:border-r border-solid border-slate-200">
+        <div className="md:flex w-full p-4 bg-slate-300 md:bg-white">
+            <div className="tabsctas md:pr-8 md:w-1/4 md:border-r border-solid border-slate-200">
                 <h2 className="bg-blue-100 text-blue-500 inline-block mb-6 p-3">
                     {navHeadingTitle}
                 </h2>

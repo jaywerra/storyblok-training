@@ -36,7 +36,7 @@ const Nav = () => {
             </button>
             <nav
                 ref={ref}
-                className={`${showMenu ? 'block' : 'hidden'} md:block fixed md:static left-0 top-20 md:top-0 w-screen md:w-auto bg-white md:bg-none h-screen md:h-auto py-8 md:py-0`}
+                className={`${showMenu ? 'block' : 'hidden'} md:block absolute md:static left-0 top-24 md:top-0 w-screen md:w-auto bg-white h-auto md:h-auto py-4 md:py-0`}
             >
                 <ul className="md:flex font-mono uppercase tracking-widest">
                     {NavData.map((link, i) => {
@@ -54,7 +54,7 @@ const Nav = () => {
                                 />
                                 {link.subNav && (
                                     <div
-                                        className={`${subnav === i ? 'block' : 'hidden'} flex md:absolute left-0 md:mt-8 p-4 md:p-12 w-full bg-white md:border md:border-solid md:border-slate-300 drop-shadow-xl`}
+                                        className={`${subnav === i ? 'block' : 'hidden'} flex md:absolute left-0 mt-4 md:mt-8 md:p-12 w-full bg-slate-100 md:bg-white md:border md:border-solid md:border-slate-300 drop-shadow-xl`}
                                     >
                                         <NavTabs navHeadingTitle={link.title}>
                                             {link.subNav.map(subLink => {

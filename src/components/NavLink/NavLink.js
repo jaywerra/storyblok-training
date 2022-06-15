@@ -11,7 +11,7 @@ const NavLink = ({
         <Link
             to={linkHref}
             onClick={toggleMenu}
-            className={`${activeClass} pl-4 md:pl-0`}
+            className={`${activeClass} pl-4 md:pl-0 block`}
         >
             {linkLabel}
         </Link>
