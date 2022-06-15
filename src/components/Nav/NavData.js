@@ -5,6 +5,7 @@ import {
 } from 'react-icons/fa';
 import MenuList from '../MenuList/MenuList';
 import imageOne from '../../images/menu-fpo-img.png';
+import imageTwo from '../../images/menu-fpo-blue-img.png';
 
 export const NavData = [
     {
@@ -44,25 +45,53 @@ export const NavData = [
             {
                 linkLabel: "Index-Free Architecture",
                 linkHref: "#",
-                component: 'menuList',
+                component: 'menuWithImage',
+                imagePath: imageTwo,
                 subNavItems: [
                     {
                         linkLabel: "C2 - XXXX",
-                        imagePath: imageOne,
+                        linkHref: "#",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
                         linkLabel: "C2 - Observability",
-                        imagePath: imageOne,
+                        linkHref: "#",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "View all",
                     },
                     {
                         linkLabel: "C2 - Enterprise",
-                        imagePath: imageOne,
+                        linkHref: "#",
+                        imagePath: imageTwo,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "Download now",
+                    },
+                    {
+                        linkLabel: "C2 - XXXX",
+                        linkHref: "#",
+                        imagePath: imageTwo,
+                        imageAltText: "Alt text",
+                        linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
+                        readMoreLabel: "Start for free",
+                    },
+                    {
+                        linkLabel: "C2 - Observability",
+                        linkHref: "#",
+                        imagePath: imageTwo,
+                        imageAltText: "Alt text",
+                        linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                        readMoreLabel: "View all",
+                    },
+                    {
+                        linkLabel: "C2 - Enterprise",
+                        linkHref: "#",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
@@ -83,7 +112,7 @@ export const NavData = [
                     },
                     {
                         linkLabel: "C3 - Observability",
-                        imagePath: imageOne,
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
@@ -104,7 +133,7 @@ export const NavData = [
                 subNavItems: [
                     {
                         linkLabel: "C4 - XXXX",
-                        imagePath: imageOne,
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
@@ -118,7 +147,7 @@ export const NavData = [
                     },
                     {
                         linkLabel: "C4 - Enterprise",
-                        imagePath: imageOne,
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "View all",
@@ -261,24 +290,25 @@ export const NavData = [
             {
                 linkLabel: "News",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageTwo,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
-                        imagePath: imageOne,
+                        linkLabel: "C1 - XXXX",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C1 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C1 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -289,24 +319,25 @@ export const NavData = [
             {
                 linkLabel: "Press Releases",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageOne,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C2 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C2 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C2 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -317,24 +348,25 @@ export const NavData = [
             {
                 linkLabel: "Partners",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageTwo,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C3 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C3 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C3 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -345,7 +377,8 @@ export const NavData = [
             {
                 linkLabel: "Careers",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageOne,
                 subNavItems: [
                     {
                         linkLabel: "C4 - XXXX",
@@ -373,24 +406,25 @@ export const NavData = [
             {
                 linkLabel: "FAQs",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageTwo,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C5 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C5 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C5 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -413,24 +447,25 @@ export const NavData = [
             {
                 linkLabel: "Blogs",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageTwo,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C1 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C1 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C1 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -441,24 +476,24 @@ export const NavData = [
             {
                 linkLabel: "Glossary",
                 linkHref: "/",
-                component: "",
+                component: "menuList",
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
-                        imagePath: imageOne,
+                        linkLabel: "C2 - XXXX",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C2 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C2 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -469,25 +504,25 @@ export const NavData = [
             {
                 linkLabel: "Guides",
                 linkHref: "/",
-                component: "",
+                component: "menuList",
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C3 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C3 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
-                        imagePath: imageOne,
+                        linkLabel: "C3 - Enterprise",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "View all",
@@ -497,7 +532,8 @@ export const NavData = [
             {
                 linkLabel: "The Nest",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageOne,
                 subNavItems: [
                     {
                         linkLabel: "C4 - XXXX",
@@ -525,24 +561,25 @@ export const NavData = [
             {
                 linkLabel: "Resources",
                 linkHref: "/",
-                component: "",
+                component: "menuWithImage",
+                imagePath: imageTwo,
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C5 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C5 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C5 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -553,25 +590,25 @@ export const NavData = [
             {
                 linkLabel: "Events",
                 linkHref: "/",
-                component: "",
+                component: "menuList",
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
-                        imagePath: imageOne,
+                        linkLabel: "C6 - XXXX",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
+                        linkLabel: "C6 - Observability",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
-                        imagePath: imageOne,
+                        linkLabel: "C6 - Enterprise",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "View all",
@@ -581,24 +618,24 @@ export const NavData = [
             {
                 linkLabel: "Customer Success",
                 linkHref: "/",
-                component: "",
+                component: "menuList",
                 subNavItems: [
                     {
-                        linkLabel: "C4 - XXXX",
+                        linkLabel: "C7 - XXXX",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet",
                         readMoreLabel: "Start for free",
                     },
                     {
-                        linkLabel: "C4 - Observability",
-                        imagePath: imageOne,
+                        linkLabel: "C7 - Observability",
+                        imagePath: imageTwo,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
                         readMoreLabel: "Download now",
                     },
                     {
-                        linkLabel: "C4 - Enterprise",
+                        linkLabel: "C7 - Enterprise",
                         imagePath: imageOne,
                         imageAltText: "Alt text",
                         linkSummary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
@@ -609,3 +646,4 @@ export const NavData = [
         ],
     },
 ];
+

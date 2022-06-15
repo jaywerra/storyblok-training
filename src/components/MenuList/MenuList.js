@@ -11,6 +11,7 @@ const MenuList = ({
     readMoreLabel,
 }) => {
     return (
+        
         <li key={itemTitle} className="w-1/3">
             <div className="thumbnail">
                 <img src={imagePath} alt={imageAltText} />
@@ -25,6 +26,7 @@ const MenuList = ({
                 {readMoreLabel} <BsChevronRight />
             </Link>
         </li>
+       
     )
 }
 

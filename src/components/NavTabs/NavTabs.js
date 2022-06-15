@@ -23,7 +23,7 @@ const NavTabs = ({
                         const label = tab.props.label;
                         return (
                             <li
-                                className={`${label === activeTab ? "text-blue-600" : ""} mb-3`}
+                                className={`${label === activeTab ? "text-blue-600" : ""} mb-4`}
                                 key={label}
                             >
                                 <button

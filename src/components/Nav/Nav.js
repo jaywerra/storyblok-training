@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { FaStumbleuponCircle } from 'react-icons/fa';
 import useOnClickOutside from '../../hooks/use-clickoutside';
 import MenuList from '../MenuList/MenuList';
+import MenuWithImage from '../MenuWithImage/MenuWithImage';
 import NavLink from '../NavLink/NavLink';
 import NavTabs from '../NavTabs/NavTabs';
 import { NavData } from './NavData';
@@ -47,25 +48,43 @@ const Nav = () => {
                                                     key={subLink.linkLabel}
                                                 >
                                                     {subLink.subNavItems && (
-                                                        <ul className="flex justify-between gap-10">
-                                                            {subLink.subNavItems.map(innerSubItem => (
-                                                                <>
-                                                                    {subLink.component === "menuList"
-                                                                        ? 
-                                                                            <MenuList
-                                                                                itemTitle={innerSubItem?.linkLabel}
-                                                                                imagePath={innerSubItem?.imagePath}
-                                                                                imageAltText={innerSubItem?.imageAltText}
-                                                                                linkSummary={innerSubItem?.linkSummary}
-                                                                                readMoreLabel={innerSubItem?.readMoreLabel}
-                                                                            />
-                                                                        :
-                                                                            <p>{subLink.linkLabel}</p>
-                                                                    }
-                                                                    
-                                                                </>
-                                                            ))}
-                                                        </ul>
+                                                        <>
+                                                            {subLink.component === "menuList" && (
+                                                                <ul className="flex justify-between gap-10">
+                                                                    {subLink.subNavItems.map(innerSubItem => (
+                                                                        <>
+                                                                            {/* {subLink.component === "menuList" && ( */}
+                                                                                <MenuList
+                                                                                    itemTitle={innerSubItem?.linkLabel}
+                                                                                    imagePath={innerSubItem?.imagePath}
+                                                                                    imageAltText={innerSubItem?.imageAltText}
+                                                                                    linkSummary={innerSubItem?.linkSummary}
+                                                                                    readMoreLabel={innerSubItem?.readMoreLabel}
+                                                                                />
+                                                                            {/* )} */}
+                                                                        </>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                            {subLink.component === "menuWithImage" && (
+                                                                <div className="flex">
+                                                                    <div className="w-1/2">
+                                                                        <ul>
+                                                                            {subLink.subNavItems.map(innerSubItem => (
+                                                                                <MenuWithImage
+                                                                                    linkLabel={innerSubItem?.linkLabel}
+                                                                                    linkHref={innerSubItem?.linkHref}
+                                                                                />
+                                                                            ))}
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div className="w-1/2">
+                                                                        {/* Make Img Component */}
+                                                                        <img src={subLink.imagePath} alt="" />
+                                                                    </div>
+                                                                </div>
+                                                            )}
+                                                        </>
                                                     )}
                                                 </div>
                                             );
