@@ -9,6 +9,8 @@ import { NavData } from './NavData';
 
 const Nav = () => {
     const [subnav, setSubnav] = useState(null);
+    const [showMenu, setShowMenu] = useState(false);
+
     const ref = useRef();
 
     useOnClickOutside(ref, () => setSubnav(false));
@@ -20,83 +22,94 @@ const Nav = () => {
 		setSubnav(i);
     }
 
+    const burgerClick = () => {
+        setShowMenu(!showMenu);
+    }
+
     return (
-        <nav ref={ref}>
-            <ul className="flex font-mono uppercase tracking-widest">
-                {NavData.map((link, i) => {
-                    return (                    
-                        <li  
-                            key={link.linkLabel} 
-                            className="ml-10"
-                        >
-                            <NavLink
-                                linkHref={link.linkHref}
-                                linkLabel={link.linkLabel}
-                                link={link}
-                                toggleMenu={() => {toggleMenu(i)}}
-                                activeClass={`${subnav === i ? 'text-blue-600' : ''}`}
-                            />
-                            {link.subNav && (
-                                <div
-                                    className={`${subnav === i ? 'block' : 'hidden'} flex absolute left-0 mt-8 p-12 w-full bg-white border border-solid border-slate-300 drop-shadow-xl`}
-                                >
-                                    <NavTabs navHeadingTitle={link.title}>
-                                        {link.subNav.map(subLink => {
-                                            return (
-                                                <div
-                                                    label={subLink.linkLabel}
-                                                    key={subLink.linkLabel}
-                                                >
-                                                    {subLink.subNavItems && (
-                                                        <>
-                                                            {subLink.component === "menuList" && (
-                                                                <ul className="flex justify-between gap-10">
-                                                                    {subLink.subNavItems.map(innerSubItem => (
-                                                                        <>
-                                                                            {/* {subLink.component === "menuList" && ( */}
-                                                                                <MenuList
-                                                                                    itemTitle={innerSubItem?.linkLabel}
-                                                                                    imagePath={innerSubItem?.imagePath}
-                                                                                    imageAltText={innerSubItem?.imageAltText}
-                                                                                    linkSummary={innerSubItem?.linkSummary}
-                                                                                    readMoreLabel={innerSubItem?.readMoreLabel}
-                                                                                />
-                                                                            {/* )} */}
-                                                                        </>
-                                                                    ))}
-                                                                </ul>
-                                                            )}
-                                                            {subLink.component === "menuWithImage" && (
-                                                                <div className="flex">
-                                                                    <div className="w-1/2">
-                                                                        <ul>
-                                                                            {subLink.subNavItems.map(innerSubItem => (
-                                                                                <MenuWithImage
-                                                                                    linkLabel={innerSubItem?.linkLabel}
-                                                                                    linkHref={innerSubItem?.linkHref}
-                                                                                />
-                                                                            ))}
-                                                                        </ul>
+        <>
+            <button
+                onClick={burgerClick}
+                className="md:hidden py-2 px-6 border border-solid border-blue-700"
+            >
+                Menu
+            </button>
+            <nav
+                ref={ref}
+                className={`${showMenu ? 'block' : 'hidden'} md:block fixed md:static left-0 top-20 md:top-0 w-screen md:w-auto bg-white md:bg-none h-screen md:h-auto py-8 md:py-0`}
+            >
+                <ul className="md:flex font-mono uppercase tracking-widest">
+                    {NavData.map((link, i) => {
+                        return (                    
+                            <li  
+                                key={link.linkLabel} 
+                                className="mb-4 md:ml-10 md:mb-0"
+                            >
+                                <NavLink
+                                    linkHref={link.linkHref}
+                                    linkLabel={link.linkLabel}
+                                    link={link}
+                                    toggleMenu={() => {toggleMenu(i)}}
+                                    activeClass={`${subnav === i ? 'text-blue-600' : ''}`}
+                                />
+                                {link.subNav && (
+                                    <div
+                                        className={`${subnav === i ? 'block' : 'hidden'} flex md:absolute left-0 md:mt-8 p-4 md:p-12 w-full bg-white md:border md:border-solid md:border-slate-300 drop-shadow-xl`}
+                                    >
+                                        <NavTabs navHeadingTitle={link.title}>
+                                            {link.subNav.map(subLink => {
+                                                return (
+                                                    <div
+                                                        label={subLink.linkLabel}
+                                                        key={subLink.linkLabel}
+                                                    >
+                                                        {subLink.subNavItems && (
+                                                            <>
+                                                                {subLink.component === "menuList" && (
+                                                                    <ul className="md:flex justify-between gap-10">
+                                                                        {subLink.subNavItems.map(innerSubItem => (
+                                                                            <MenuList
+                                                                                itemTitle={innerSubItem?.linkLabel}
+                                                                                imagePath={innerSubItem?.imagePath}
+                                                                                imageAltText={innerSubItem?.imageAltText}
+                                                                                linkSummary={innerSubItem?.linkSummary}
+                                                                                readMoreLabel={innerSubItem?.readMoreLabel}
+                                                                            />
+                                                                        ))}
+                                                                    </ul>
+                                                                )}
+                                                                {subLink.component === "menuWithImage" && (
+                                                                    <div className="flex">
+                                                                        <div className="w-1/2">
+                                                                            <ul>
+                                                                                {subLink.subNavItems.map(innerSubItem => (
+                                                                                    <MenuWithImage
+                                                                                        linkLabel={innerSubItem?.linkLabel}
+                                                                                        linkHref={innerSubItem?.linkHref}
+                                                                                    />
+                                                                                ))}
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div className="w-1/2">
+                                                                            {/* Make Img Component */}
+                                                                            <img src={subLink.imagePath} alt="" />
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="w-1/2">
-                                                                        {/* Make Img Component */}
-                                                                        <img src={subLink.imagePath} alt="" />
-                                                                    </div>
-                                                                </div>
-                                                            )}
-                                                        </>
-                                                    )}
-                                                </div>
-                                            );
-                                        })}
-                                    </NavTabs>
-                                </div>
-                            )}
-                        </li>
-                    );
-                })}
-            </ul>
-        </nav>
+                                                                )}
+                                                            </>
+                                                        )}
+                                                    </div>
+                                                );
+                                            })}
+                                        </NavTabs>
+                                    </div>
+                                )}
+                            </li>
+                        );
+                    })}
+                </ul>
+            </nav>
+        </>
     )
 }
 

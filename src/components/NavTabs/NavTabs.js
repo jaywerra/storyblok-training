@@ -13,8 +13,8 @@ const NavTabs = ({
     };
     
     return (
-        <div className="flex w-full">
-            <div className="tabsctas pr-8 w-1/4 border-r border-solid border-slate-200">
+        <div className="md:flex w-full">
+            <div className="tabsctas pr-8 md:w-1/4 md:border-r border-solid border-slate-200">
                 <h2 className="bg-blue-100 text-blue-500 inline-block mb-6 p-3">
                     {navHeadingTitle}
                 </h2>
@@ -37,7 +37,7 @@ const NavTabs = ({
                     })}
                 </ul>
             </div>
-            <div className="panels w-3/4 pl-8">
+            <div className="panels md:w-3/4 md:pl-8">
                 {children.map(one => {
                     if (one.props.label === activeTab) {
                         return (

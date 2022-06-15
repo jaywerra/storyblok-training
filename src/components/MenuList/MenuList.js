@@ -12,7 +12,7 @@ const MenuList = ({
 }) => {
     return (
         
-        <li key={itemTitle} className="w-1/3">
+        <li key={itemTitle} className="md:w-1/3">
             <div className="thumbnail">
                 <img src={imagePath} alt={imageAltText} />
             </div>
