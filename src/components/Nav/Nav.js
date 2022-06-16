@@ -81,7 +81,7 @@ const Nav = () => {
                                                                 )}
                                                                 {subLink.component === "menuWithImage" && (
                                                                     <div className="flex">
-                                                                        <div className="w-1/2">
+                                                                        <div className="md:w-1/2">
                                                                             <ul>
                                                                                 {subLink.subNavItems.map(innerSubItem => (
                                                                                     <MenuWithImage
@@ -91,7 +91,7 @@ const Nav = () => {
                                                                                 ))}
                                                                             </ul>
                                                                         </div>
-                                                                        <div className="w-1/2">
+                                                                        <div className="md:w-1/2 hidden md:block">
                                                                             {/* Make Img Component */}
                                                                             <img src={subLink.imagePath} alt="" />
                                                                         </div>

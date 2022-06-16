@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const NavTabs = ({
     children,
@@ -41,12 +42,22 @@ const NavTabs = ({
                 {children.map(one => {
                     if (one.props.label === activeTab) {
                         return (
-                            <div
+                            <motion.div
                                 key={one.props.label}
                                 className="tab-panel"
+                                initial={{
+                                    opacity: 0,
+                                }}
+                                animate={{
+                                    opacity: 1,
+                                }}
+                                transition={{ 
+                                    ease: "easeInOut", 
+                                    duration: 0.75 
+                                }}
                             >
                                 {one.props.children}
-                            </div>
+                            </motion.div>
                         );
                     }
                     return null;
