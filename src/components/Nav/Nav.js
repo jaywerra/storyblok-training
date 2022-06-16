@@ -51,6 +51,7 @@ const Nav = () => {
                                     link={link}
                                     toggleMenu={() => {toggleMenu(i)}}
                                     activeClass={`${subnav === i ? 'text-blue-600' : ''}`}
+                                    animateArrowClass={`${subnav === i ? 'rotate-180' : ''}`}
                                 />
                                 {link.subNav && (
                                     <div
