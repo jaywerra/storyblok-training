@@ -14,7 +14,9 @@ const NavTabs = ({
     };
     
     return (
-        <div className="md:flex w-full p-4 bg-slate-300 md:bg-white">
+        <div
+            className="md:flex w-full p-4 bg-slate-300 md:bg-white"
+        >
             <div className="tabsctas md:pr-8 md:w-1/4 md:border-r border-solid border-slate-200">
                 <h2 className="bg-blue-100 text-blue-500 inline-block mb-6 p-3">
                     {navHeadingTitle}
@@ -37,6 +39,7 @@ const NavTabs = ({
                         );
                     })}
                 </ul>
+                {/* // MQ these */}
             </div>
             <div className="panels md:w-3/4 md:pl-8">
                 {children.map(one => {
@@ -53,7 +56,7 @@ const NavTabs = ({
                                 }}
                                 transition={{ 
                                     ease: "easeInOut", 
-                                    duration: 0.75 
+                                    duration: 0.35 
                                 }}
                             >
                                 {one.props.children}

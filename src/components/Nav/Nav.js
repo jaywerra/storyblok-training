@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FaStumbleuponCircle } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import useOnClickOutside from '../../hooks/use-clickoutside';
 import MenuList from '../MenuList/MenuList';
 import MenuWithImage from '../MenuWithImage/MenuWithImage';
@@ -54,7 +55,7 @@ const Nav = () => {
                                     animateArrowClass={`${subnav === i ? 'rotate-180' : ''}`}
                                 />
                                 {link.subNav && (
-                                    <div
+                                    <motion.div
                                         className={`${subnav === i ? 'block' : 'hidden'} flex md:absolute left-0 mt-4 md:mt-8 md:p-12 w-full bg-slate-100 md:bg-white md:border md:border-solid md:border-slate-300 drop-shadow-xl`}
                                     >
                                         <NavTabs navHeadingTitle={link.title}>
@@ -103,7 +104,7 @@ const Nav = () => {
                                                 );
                                             })}
                                         </NavTabs>
-                                    </div>
+                                    </motion.div>
                                 )}
                             </li>
                         );
