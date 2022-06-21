@@ -33,7 +33,7 @@ const NavTabs = ({
                                     onClick={(e) => handleClick(e, label)}
                                     className="uppercase hover:underline text-inherit hover:text-blue-600"
                                 >
-                                    {label}
+                                    x{label}
                                 </button>
                             </li>
                         );
