@@ -10,17 +10,22 @@ const NavLink = ({
     animateArrowClass,
 }) => {
     return (
-        <Link
-            to={linkHref}
-            onClick={toggleMenu}
-            className={`${activeClass} px-4 md:pl-0 flex justify-between md:block`}
-        >
-            {linkLabel}
-            {/* Add if has child than show check */}
-            <div className={`${animateArrowClass} md:hidden`}>
-                <FiChevronDown style={{height: "24px", width: "24px"}} />
-            </div>
-        </Link>
+        <>
+            {linkHref ? 
+                <button
+                    onClick={toggleMenu}
+                    className={`${activeClass} px-4 md:pl-0 flex justify-between md:block`}
+                >
+                    {linkLabel}
+                    {/* Add if has child than show check */}
+                    <div className={`${animateArrowClass} md:hidden`}>
+                        <FiChevronDown style={{height: "24px", width: "24px"}} />
+                    </div>
+                </button>
+                :
+                <p>No Link</p>
+            }
+        </>
     )
 }
 

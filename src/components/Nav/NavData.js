@@ -158,7 +158,7 @@ export const NavData = [
     },
     {
         linkLabel: "Pricing",
-        linkHref: "#",
+        linkHref: "/pricing",
         icon: <FaChevronDown />,
     },
     {
