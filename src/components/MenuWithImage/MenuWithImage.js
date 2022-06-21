@@ -8,7 +8,7 @@ const MenuWithImage = ({
   return (
     <li className="mb-3">
         <Link
-            to={linkHref}
+            to={`#`}
             className="uppercase hover:underline text-inherit hover:text-blue-600"
         >
             {linkLabel}

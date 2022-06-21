@@ -38,8 +38,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `inter\:100,200,300,400,600,700`,
-          `dm mono\:300,400,400,500,600`,
+          `inter:100,200,300,400,600,700`,
+          `dm mono:300,400,400,500,600`,
         ],
         display: 'swap'
       }
