@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 
 const NavTabs = ({
     children,
     navHeadingTitle,
+    hasChildMenu,
+    label,
+    pageLink,
 }) => {
 
     const [activeTab, setActiveTab] = useState(children[0].props.label);
@@ -22,48 +26,48 @@ const NavTabs = ({
                     {navHeadingTitle}
                 </h2>
                 <ul>
-                    
                     {children.map(tab => {
-                        const label = tab.props.label;
-
-                        return (
-                            <li
-                                className={`${label === activeTab ? "text-blue-600" : ""} mb-4`}
-                                key={label}
-                            >
-                                <button
-                                    onClick={(e) => handleClick(e, label)}
-                                    className="uppercase hover:underline text-inherit hover:text-blue-600"
+                        // {console.log('Tab ', tab.props)}
+                        if (tab.props.pageLink.length === 0) {
+                            return (
+                                <li
+                                    className={`${tab.props.label === activeTab ? "text-blue-600" : ""} mb-4`}
+                                    key={tab.props.label}
                                 >
-                                    {label}
-                                </button>
+                                    <button
+                                        onClick={(e) => handleClick(e, tab.props.label)}
+                                        className="uppercase hover:underline text-inherit hover:text-blue-600"
+                                    >
+                                        {tab.props.label}
+                                    </button>
+                                </li>
+                            )
+                        }
+                        return (
+                            <li className="mb-4">
+                                <Link
+                                    to={tab.props.pageLink}
+                                    className="hover:underline text-inherit hover:text-blue-600"
+                                >
+                                    {tab.props.label}
+                                </Link>
                             </li>
-                        );
-
+                        )
                     })}
                 </ul>
-                {/* // MQ these */}
             </div>
             <div className="panels md:w-3/4 md:pl-8">
                 {children.map(one => {
-                    if (one.props.label === activeTab) {
+                    // {console.log("One", one)}
+
+                    if (one.props.label === activeTab && one.props.pageLink.length === 0) {
                         return (
-                            <motion.div
+                            <div
                                 key={one.props.label}
                                 className="tab-panel"
-                                initial={{
-                                    opacity: 0,
-                                }}
-                                animate={{
-                                    opacity: 1,
-                                }}
-                                transition={{ 
-                                    ease: "easeInOut", 
-                                    duration: 0.35 
-                                }}
                             >
-                                {one.props.children}
-                            </motion.div>
+                                {one.props.label}
+                            </div>
                         );
                     }
                     return null;

@@ -3,6 +3,8 @@ import { Link } from 'gatsby';
 import useOnClickOutside from '../../hooks/use-clickoutside';
 import NavLink from '../NavLink/NavLink';
 import NavTabs from '../NavTabs/NavTabs';
+import NavTab from '../NavTabs/NavTab';
+import uniqueId from 'uniqid';
 
 const NavMain = ({ blok }) => {
     const [subnav, setSubnav] = useState(null);
@@ -16,7 +18,7 @@ const NavMain = ({ blok }) => {
 		}
 		setSubnav(i);
     }
-    console.log(blok)
+    // console.log(blok)
 	return (
         <div className="relative px-4 lg:px-0 lg:container lg:mx-auto z-10">
             <div className="px-4 lg:px-0 lg:container lg:mx-auto py-4 mt-12">
@@ -47,18 +49,18 @@ const NavMain = ({ blok }) => {
                                                 className={`${subnav === i ? 'block' : 'hidden'} flex md:absolute left-0 mt-4 md:mt-8 md:p-12 w-full bg-slate-100 md:bg-white md:border md:border-solid md:border-slate-300 drop-shadow-xl`}
                                             >
                                                 {/* Dropdown content */}
+                                                
                                                 {item?.tab_content && (
-                                                    <NavTabs navHeadingTitle={item.nav_tab}>
-                                                        {item?.tab_content?.map(el => {
+                                                    <NavTabs navHeadingTitle={item?.section_title}>
+                                                        {item?.tab_content?.map(linkEl => {
                                                             return (
-                                                                <div 
-                                                                    label={el?.child_nav_tab}
-                                                                    key={el?.child_nav_tab}
-                                                                >
-                                                                    {el?.child_nav_tab}
-                                                                </div>
+                                                                <div
+                                                                    key={uniqueId('sb')} 
+                                                                    label={linkEl?.link_label}
+                                                                    pageLink={linkEl?.link_url?.cached_url}
+                                                                />
                                                             )
-                                                        })}
+                                                        })}                                               
                                                     </NavTabs>
                                                 )}
                                             </div>
