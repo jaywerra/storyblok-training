@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 const NavTabs = ({
     children,
     navHeadingTitle,
-    hasChildMenu,
     label,
     pageLink,
+    content,
 }) => {
 
     const [activeTab, setActiveTab] = useState(children[0].props.label);
@@ -44,7 +44,10 @@ const NavTabs = ({
                             )
                         }
                         return (
-                            <li className="mb-4">
+                            <li
+                                className="mb-4"
+                                key={tab.props.label}
+                            >
                                 <Link
                                     to={tab.props.pageLink}
                                     className="hover:underline text-inherit hover:text-blue-600"
@@ -58,7 +61,7 @@ const NavTabs = ({
             </div>
             <div className="panels md:w-3/4 md:pl-8">
                 {children.map(one => {
-                    // {console.log("One", one)}
+                    {console.log("One", one)}
 
                     if (one.props.label === activeTab && one.props.pageLink.length === 0) {
                         return (
@@ -66,7 +69,7 @@ const NavTabs = ({
                                 key={one.props.label}
                                 className="tab-panel"
                             >
-                                {one.props.label}
+                                {one.props.content}
                             </div>
                         );
                     }
