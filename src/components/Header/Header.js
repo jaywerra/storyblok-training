@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Nav from '../Nav';
+import NavMain from '../NavMain/NavMain';
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
           >
             Logo
           </Link>
-          <Nav />
+          
         </div>
       </div>
     </header>

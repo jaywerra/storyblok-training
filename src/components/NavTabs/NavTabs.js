@@ -22,8 +22,10 @@ const NavTabs = ({
                     {navHeadingTitle}
                 </h2>
                 <ul>
+                    
                     {children.map(tab => {
                         const label = tab.props.label;
+
                         return (
                             <li
                                 className={`${label === activeTab ? "text-blue-600" : ""} mb-4`}
@@ -33,10 +35,11 @@ const NavTabs = ({
                                     onClick={(e) => handleClick(e, label)}
                                     className="uppercase hover:underline text-inherit hover:text-blue-600"
                                 >
-                                    x{label}
+                                    {label}
                                 </button>
                             </li>
                         );
+
                     })}
                 </ul>
                 {/* // MQ these */}
