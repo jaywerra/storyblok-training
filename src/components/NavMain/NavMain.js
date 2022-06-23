@@ -35,7 +35,7 @@ const NavMain = ({ blok }) => {
                                         with dropdown markup otherwise render as link 
                                     */}
                                     {console.log("Item", item)}
-                                    {item?.has_child_menu ?
+                                    {item?.tab_content ?
                                         <>
                                             <button
                                                 className="uppercase tracking-widest"
@@ -56,7 +56,7 @@ const NavMain = ({ blok }) => {
                                                                     key={linkEl?.link_label} 
                                                                     label={linkEl?.link_label}
                                                                     pageLink={linkEl?.link_url?.cached_url}
-                                                                    content={linkEl?.nav_cards?.map(inner => inner.nav_cards.map(card => (
+                                                                    content={linkEl?.nav_card?.map(card => (
                                                                         <div className="w-1/3 mx-2">
                                                                             <div className="mb-4">
                                                                                 <img src={card.thumbnail.filename} alt="" />
@@ -66,7 +66,7 @@ const NavMain = ({ blok }) => {
                                                                             </h2>
                                                                             {/* <div dangerouslySetInnerHTML={{__html: card?.card_summary?.content}} /> */}
                                                                         </div>
-                                                                    )))}
+                                                                    ))}
                                                                 />
                                                             )
                                                         })}                                               

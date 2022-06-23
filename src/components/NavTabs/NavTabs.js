@@ -27,8 +27,8 @@ const NavTabs = ({
                 </h2>
                 <ul>
                     {children.map(tab => {
-                        // {console.log('Tab ', tab.props)}
-                        if (tab.props.pageLink.length === 0) {
+                        {console.log('Tab Link', tab.props.pageLink)}
+                        if (!tab.props.pageLink) {
                             return (
                                 <li
                                     className={`${tab.props.label === activeTab ? "text-blue-600" : ""} mb-4`}
@@ -67,7 +67,7 @@ const NavTabs = ({
                                 key={one.props.label}
                                 className="tab-panel"
                             >
-                                <div className="flex justify-between">
+                                <div className="flex">
                                     {one.props.content}
                                 </div>
                             </div>
