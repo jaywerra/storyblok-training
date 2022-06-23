@@ -36,7 +36,7 @@ const NavTabs = ({
                                 >
                                     <button
                                         onClick={(e) => handleClick(e, tab.props.label)}
-                                        className="uppercase hover:underline text-inherit hover:text-blue-600"
+                                        className="uppercase hover:underline text-inherit hover:text-blue-600 tracking-widest"
                                     >
                                         {tab.props.label}
                                     </button>
@@ -61,15 +61,15 @@ const NavTabs = ({
             </div>
             <div className="panels md:w-3/4 md:pl-8">
                 {children.map(one => {
-                    {console.log("One", one)}
-
                     if (one.props.label === activeTab && one.props.pageLink.length === 0) {
                         return (
                             <div
                                 key={one.props.label}
                                 className="tab-panel"
                             >
-                                {one.props.content}
+                                <div className="flex justify-between">
+                                    {one.props.content}
+                                </div>
                             </div>
                         );
                     }
@@ -80,4 +80,4 @@ const NavTabs = ({
     )
 }
 
-export default NavTabs
+export default NavTabs;
