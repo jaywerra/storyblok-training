@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import uniqueId from 'uniqid';
 import { motion } from 'framer-motion';
 
 const NavTabs = ({
     children,
-    navHeadingTitle,
     label,
     pageLink,
     content,
@@ -25,22 +23,18 @@ const NavTabs = ({
             <div
                 className="tabs-controls md:pr-8 md:w-1/4 md:border-r border-solid border-slate-200"
             >
-                <h2
-                    className="bg-blue-100 text-blue-500 inline-block mb-6 p-3"
-                >
-                    {navHeadingTitle}
-                </h2>
                 <ul>
                     {children.map(tab => {
+                     
                         if (!tab.props.pageLink) {
                             return (
                                 <li
-                                    className={`${tab.props.label === activeTab ? "text-blue-600" : ""} mb-4`}
+                                    className={`${tab.props.label === activeTab ? "text-blue-600" : ""} mb-4 first:bg-blue-100 first-of-type:inline-block first:p-4 hover:underline first:hover:no-underline`}
                                     key={tab.props.label}
                                 >
                                     <button
                                         onClick={(e) => handleClick(e, tab.props.label)}
-                                        className="uppercase hover:underline text-inherit hover:text-blue-600 tracking-widest"
+                                        className="uppercase text-inherit tracking-widest"
                                     >
                                         {tab.props.label}
                                     </button>
@@ -54,7 +48,7 @@ const NavTabs = ({
                             >
                                 <Link
                                     to={tab.props.pageLink}
-                                    className="hover:underline text-inherit hover:text-blue-600"
+                                    className={`hover:underline text-inherit hover:text-blue-600`}
                                 >
                                     {tab.props.label}
                                 </Link>

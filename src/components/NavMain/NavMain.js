@@ -46,7 +46,7 @@ const NavMain = ({ blok }) => {
                                         Check for dropdown - if it has a dropdown render button 
                                         with dropdown markup otherwise render as link 
                                     */}
-                                    {item?.tab_content ?
+                                    {item?.tab_content?.length > 0 ?
                                         <>
                                             <button
                                                 className="uppercase tracking-widest px-4 md:px-0"
@@ -59,7 +59,7 @@ const NavMain = ({ blok }) => {
                                             >
                                                 {/* Dropdown content */}
                                                 {item?.tab_content && (
-                                                    <NavTabs navHeadingTitle={item?.section_title}>
+                                                    <NavTabs>
                                                         {item?.tab_content?.map(linkEl => {
                                                             return (
                                                                 <div
