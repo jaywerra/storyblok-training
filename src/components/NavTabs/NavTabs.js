@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
+import uniqueId from 'uniqid';
 import { motion } from 'framer-motion';
 
 const NavTabs = ({
@@ -19,10 +20,14 @@ const NavTabs = ({
     
     return (
         <div
-            className="md:flex w-full p-4 bg-slate-300 md:bg-white"
+            className="md:flex w-full py-8 px-4 md:py-4 md:px-0 bg-slate-300 md:bg-white"
         >
-            <div className="tabs-controls md:pr-8 md:w-1/4 md:border-r border-solid border-slate-200">
-                <h2 className="bg-blue-100 text-blue-500 inline-block mb-6 p-3">
+            <div
+                className="tabs-controls md:pr-8 md:w-1/4 md:border-r border-solid border-slate-200"
+            >
+                <h2
+                    className="bg-blue-100 text-blue-500 inline-block mb-6 p-3"
+                >
                     {navHeadingTitle}
                 </h2>
                 <ul>
@@ -64,7 +69,7 @@ const NavTabs = ({
                         return (
                             <motion.div
                                 key={one.props.label}
-                                className="tab-panel flex px-8 md:w-3/4"
+                                className="tab-panel md:flex md:px-8 md:w-3/4"
                                 initial={{
                                     opacity: 0,
                                 }}

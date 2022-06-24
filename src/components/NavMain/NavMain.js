@@ -24,7 +24,7 @@ const NavMain = ({ blok }) => {
 
 	return (
         <div className="relative px-4 lg:px-0 lg:container lg:mx-auto z-10">
-            <div className="px-4 lg:px-0 lg:container lg:mx-auto py-4 mt-12">
+            <div className="lg:px-0 lg:container lg:mx-auto py-4 mt-12">
                 <button
                     onClick={burgerClick}
                     className="md:hidden py-2 px-6 border border-solid border-blue-700"
@@ -40,7 +40,7 @@ const NavMain = ({ blok }) => {
                             return (
                                 <li
                                     key={item.nav_tab}
-                                    className="mb-2 mr-6"
+                                    className="mb-2 md:mr-6"
                                 >
                                     {/* 
                                         Check for dropdown - if it has a dropdown render button 
@@ -49,7 +49,7 @@ const NavMain = ({ blok }) => {
                                     {item?.tab_content ?
                                         <>
                                             <button
-                                                className="uppercase tracking-widest"
+                                                className="uppercase tracking-widest px-4 md:px-0"
                                                 onClick={() => {toggleMenu(i)}}
                                             >
                                                 {item.nav_tab}
@@ -63,11 +63,14 @@ const NavMain = ({ blok }) => {
                                                         {item?.tab_content?.map(linkEl => {
                                                             return (
                                                                 <div
-                                                                    key={linkEl?.link_label} 
+                                                                    key={linkEl?.link_label}
                                                                     label={linkEl?.link_label}
                                                                     pageLink={linkEl?.link_url?.cached_url}
                                                                     content={linkEl?.nav_card?.map(card => (
-                                                                        <div className="w-1/3 mr-10 last:mr-0 flex flex-col">
+                                                                        <div
+                                                                            className="md:w-1/3 md:mr-10 last:mr-0 mb-8 md:mb-8 flex flex-col"
+                                                                            key={card.card_title}
+                                                                        >
                                                                             <div className="mb-4">
                                                                                 <Link to={card.card_link}>
                                                                                     <img src={card.thumbnail.filename} alt="" />
@@ -101,7 +104,10 @@ const NavMain = ({ blok }) => {
                                             </div>
                                         </>
                                         :
-                                        <Link to={item?.link_url?.cached_url}>
+                                        <Link
+                                            to={item?.link_url?.cached_url}
+                                            className="px-4 md:px-0"
+                                        >
                                             {item?.nav_tab}
                                         </Link>
                                     }
