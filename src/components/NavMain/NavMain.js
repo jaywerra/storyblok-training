@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'gatsby';
 import useOnClickOutside from '../../hooks/use-clickoutside';
 import NavTabs from '../NavTabs/NavTabs';
+import { BsChevronRight } from 'react-icons/bs';
 
 const NavMain = ({ blok }) => {
     const [subnav, setSubnav] = useState(null);
@@ -66,17 +67,30 @@ const NavMain = ({ blok }) => {
                                                                     label={linkEl?.link_label}
                                                                     pageLink={linkEl?.link_url?.cached_url}
                                                                     content={linkEl?.nav_card?.map(card => (
-                                                                        <div className="w-1/3 mr-10 last:mr-0">
+                                                                        <div className="w-1/3 mr-10 last:mr-0 flex flex-col">
                                                                             <div className="mb-4">
                                                                                 <Link to={card.card_link}>
                                                                                     <img src={card.thumbnail.filename} alt="" />
                                                                                 </Link>
                                                                             </div>
-                                                                            <h2 className="text-center">
-                                                                                <Link to={card.card_link}>
+                                                                            <div>
+                                                                                <Link
+                                                                                    to={card.card_link}
+                                                                                    className="block my-3 text-blue-600 md:text-center text-lg"
+                                                                                >
                                                                                     {card.card_title}
                                                                                 </Link>
-                                                                            </h2>
+                                                                                <p className="text-xs mb-8">
+                                                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                                                                    sed do eiusmod tempor incididunt ut labore
+                                                                                </p>
+                                                                            </div>
+                                                                            <Link
+                                                                                to={card.card_link}
+                                                                                className="flex mt-auto items-center text-blue-600"
+                                                                            >
+                                                                                XXXXXXXX <BsChevronRight />
+                                                                            </Link>
                                                                         </div>
                                                                     ))}
                                                                 />

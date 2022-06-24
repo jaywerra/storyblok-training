@@ -64,7 +64,7 @@ const NavTabs = ({
                         return (
                             <motion.div
                                 key={one.props.label}
-                                className="tab-panel flex px-8"
+                                className="tab-panel flex px-8 md:w-3/4"
                                 initial={{
                                     opacity: 0,
                                 }}
