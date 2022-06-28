@@ -67,6 +67,7 @@ const NavMain = ({ blok }) => {
                                                                     label={linkEl?.link_label}
                                                                     pageLink={linkEl?.link_url?.cached_url}
                                                                     content={linkEl?.nav_card?.map(card => (
+                                                                        // Make this a card component
                                                                         <div
                                                                             className="md:w-1/3 md:mr-10 last:mr-0 mb-8 md:mb-8 flex flex-col"
                                                                             key={card.card_title}
@@ -79,7 +80,7 @@ const NavMain = ({ blok }) => {
                                                                             <div>
                                                                                 <Link
                                                                                     to={card.card_link}
-                                                                                    className="block my-3 text-blue-600 md:text-center text-lg"
+                                                                                    className="block my-3 text-blue-600 md:text-center text-lMg"
                                                                                 >
                                                                                     {card.card_title}
                                                                                 </Link>
